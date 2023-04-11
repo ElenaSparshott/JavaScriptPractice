@@ -8,23 +8,32 @@ sum(8,4)
 
 //construct object
 const myDictionary = {Surname: "Boden", Name: "David"};
+const newDictionary = {Spaniel: "Williow", Terrier: "Teddy"};
+
 
 //retrieve from object
 console.log(myDictionary["Surname"])
 
+console.log(newDictionary["Spaniel"])
+
 //store in object
 myDictionary["Age"] = 33
+newDictionary["Jack Russel"] = "Timmy"
 
 console.log(myDictionary)
+console.log(newDictionary)
 
 //pull values from object
 console.log(Object.values(myDictionary))
+console.log(Object.values(newDictionary))
 
 //pull keys from object
 console.log(Object.keys(myDictionary))
+console.log(Object.keys(newDictionary))
 
 //retrieve object
-console.log(Object(myDictionary)) 
+console.log(Object(myDictionary))
+console.log(Object(newDictionary)) 
 
 
 
@@ -38,6 +47,7 @@ console.log(user.firstName); // Lady
 console.log(user.lastName); // Gaga
 
 // or
+
 console.log(user["firstName"]); // Lady
 console.log(user["lastName"]); // Gaga
 
@@ -47,8 +57,14 @@ console.log(user["lastName"]); // Gaga
 // user["anotherName"] = "sparkle"
 
 console.log(user)
+console.log(Object(user))
 
-for(let prop in myDictionary) {
+//for(let prop in Object){
+
+//}
+// Use a in for loop for an object.
+
+for(let prop in newDictionary) {
     console.log(prop)
-    console.log(myDictionary[prop])
+    console.log(newDictionary[prop])
 }
