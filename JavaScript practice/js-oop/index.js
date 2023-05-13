@@ -1,24 +1,27 @@
 console.log("hello world")
 
 class GetRoundUp {
-    constructor(amount) {
-        this.amount = amount;
+    constructor(amountList) {
+        this.amountList = amountList;
     }
     calculateRoundUp() {
-        for (let i of arr) {
-            let total;
-            i = this.amount % 100;
-            console.log(this.amount % 100)
-            if (i === 0) {
-                return
+        let total = 0;
+        for (let amount of this.amountList) {       
+            let pence = amount % 100;
+            
+            if (pence === 0) {
+                continue
             }
-            let roundUpAmount = (100 - i);
-            return total += roundUpAmount;
+            let roundUpAmount = (100 - pence);  
+            total += roundUpAmount;      
         }
+        return total
     }
 }
 
 
-const a = new GetRoundUp()
-let arr = [88, 25, 99]
-console.log(a.calculateRoundUp(arr))
+
+let arr = [597, 925, 900, 99999]
+const a = new GetRoundUp(arr)
+console.log(`the answer is ${a.calculateRoundUp()}`)
+
